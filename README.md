@@ -127,12 +127,9 @@ signed-in Claude account. On Windows the app is a Store (MSIX) package, and only
 there (`acct-<name>`). The scripts make one folder and one shortcut per account. SaneCode does the
 same and docks every window beside its sidebar: [how SaneCode runs multiple Claude instances](https://sanecode.co/docs/how-sanecode-runs-multiple-claude-instances/).
 
-## The preview app (`app/`)
+## Every account in one window
 
-`cargo run --release` in `app/` builds a preview with SaneCode's look. It doesn't run Claude: it
-points you to the full app and to these scripts. It's built with [rune](https://github.com/anomalyco/rune).
-
-![The preview app built from this repo](assets/sanecode-preview.png)
+![SaneCode: two Claude Desktop accounts side by side in one window](assets/sanecode-claude-side-by-side.png)
 
 ## FAQ
 
