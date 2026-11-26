@@ -1,0 +1,21 @@
+[package]
+name = "sanecode-preview"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Open-source preview of SaneCode's look. The full app runs multiple Claude Desktop accounts in one window: https://sanecode.co"
+publish = false
+
+[dependencies]
+rune = { git = "https://github.com/anomalyco/rune", rev = "1dba3423fd1f1904553422e7814700f817abe8af" }
+
+# rune builds with a few patched crates from its own repo; apps that use rune patch them too.
+[patch.crates-io]
+wgpu-hal = { git = "https://github.com/anomalyco/rune", rev = "1dba3423fd1f1904553422e7814700f817abe8af" }
+winit = { git = "https://github.com/anomalyco/rune", rev = "1dba3423fd1f1904553422e7814700f817abe8af" }
+parley_engine = { git = "https://github.com/anomalyco/rune", rev = "1dba3423fd1f1904553422e7814700f817abe8af" }
+accesskit_windows = { git = "https://github.com/anomalyco/rune", rev = "1dba3423fd1f1904553422e7814700f817abe8af" }
+accesskit_macos = { git = "https://github.com/anomalyco/rune", rev = "1dba3423fd1f1904553422e7814700f817abe8af" }
+
+[profile.release]
+codegen-units = 16
